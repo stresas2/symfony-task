@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      APP_ENV: dev
+      NOTIFICATIONS_ENABLED: "true"
+      NAGER_API_BASE_URL: "https://nagerholidays.com/api/v4"
+      NAGER_API_TIMEOUT: "5"
+      XDEBUG_MODE: "${XDEBUG_MODE:-debug}"
+      PHP_IDE_CONFIG: "serverName=symfony-task"
+      # php -S serves one request at a time unless it is allowed to fork workers.
+      PHP_CLI_SERVER_WORKERS: "4"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

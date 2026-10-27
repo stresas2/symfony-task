@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    # Public so functional tests can replace it with a mock and never touch the external API.
+    App\Service\HolidayService:
+        public: true

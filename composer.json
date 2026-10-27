@@ -1,0 +1,60 @@
+{
+    "name": "lukas/symfony-task",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Lukas"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "symfony/console": "7.4.*",
+        "symfony/dotenv": "7.4.*",
+        "symfony/flex": "^2",
+        "symfony/framework-bundle": "7.4.*",
+        "symfony/runtime": "7.4.*",
+        "symfony/yaml": "7.4.*",
+        "doctrine/orm": "^3.7",
+        "doctrine/doctrine-bundle": "^2.13 || ^3.0",
+        "doctrine/doctrine-migrations-bundle": "^3.3 || ^4.0",
+        "symfony/http-client": "7.4.*",
+        "symfony/cache": "7.4.*",
+        "symfony/uid": "7.4.*",
+        "symfony/monolog-bundle": "^4.1",
+        "symfony/serializer": "7.4.*",
+        "symfony/property-access": "7.4.*",
+        "symfony/validator": "7.4.*",
+        "symfony/lock": "7.4.*",
+        "brick/date-time": "^0.10.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        },
+        "platform": {
+            "php": "8.2.99"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "symfony": {
+            "require": "7.4.*"
+        }
+    },
+    "require-dev": {
+        "symfony/browser-kit": "7.4.*",
+        "symfony/css-selector": "7.4.*",
+        "phpunit/phpunit": "^11.5",
+        "symfony/phpunit-bridge": "^8.1"
+    }
+}
